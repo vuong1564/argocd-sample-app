@@ -1,0 +1,44 @@
+replicaCount: 1
+
+image:
+  repository: vuong1564/gitops-webapp-demo
+  tag: prod-17d15f111d84c7a63539ca0fdc4a282c5de236b1
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+
+  create: true
+
+  name: ""
+
+podSecurityContext: {}
+
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+
+  hosts:
+    - host: chart-example.local
+      paths: []
+
+  tls: []
+
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
